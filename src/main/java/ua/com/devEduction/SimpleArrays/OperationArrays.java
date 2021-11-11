@@ -104,8 +104,6 @@ public class OperationArrays {
         sortMerge(arrayR, length - mid);
 
 
-
-
         return mergeArray(arrsyL, arrayR);
     }
 
@@ -116,24 +114,22 @@ public class OperationArrays {
 
 
         for (int i = 0; i < arrayC.length; i++) {
-            if(positionA == arrayA.length){
+            if (positionA == arrayA.length) {
                 arrayC[i] = arrayB[positionB];
                 positionB++;
-            }else if(positionB == arrayB.length){
+            } else if (positionB == arrayB.length) {
                 arrayC[i] = arrayA[positionA];
                 positionA++;
-        }else if(arrayA[positionA] > arrayB[positionB]){
+            } else if (arrayA[positionA] > arrayB[positionB]) {
                 arrayC[i] = arrayB[positionB];
                 positionB++;
-            }else if(arrayA[positionA] < arrayB[positionB]){
+            } else if (arrayA[positionA] < arrayB[positionB]) {
                 arrayC[i] = arrayA[positionA];
                 positionA++;
             }
         }
         return arrayC;
     }
-
-
 
 
     public int[] BubbleSort(int[] Arrays) {
@@ -257,7 +253,7 @@ public class OperationArrays {
     public int[] eighth(int[] Arrays) {
         int half = Arrays.length / 2;
         int div = half + Arrays.length % 2;
-      int[] arr1 = new int[half];
+        int[] arr1 = new int[half];
         for (int i = 0; i < half; i++) {
             arr1[i] = Arrays[i];
         }
@@ -267,11 +263,11 @@ public class OperationArrays {
         }
         for (int i = 0; i < div; i++) {
             Arrays[i] = arr2[i];
-            if(i == half){
-            }else{
-               Arrays[Arrays.length - half + i] = arr1[i];
+            if (i == half) {
+            } else {
+                Arrays[Arrays.length - half + i] = arr1[i];
             }
         }
         return Arrays;
-        }
+    }
 }

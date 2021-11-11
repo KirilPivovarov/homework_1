@@ -10,9 +10,9 @@ import java.util.Scanner;
 public class ControllerLoops {
 
 
-     private final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     private static final Scanner scanner = new Scanner(System.in);
-     private  final OperationLoops operation = new OperationLoops();
+    private final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    private final OperationLoops operation = new OperationLoops();
 
     public void run() {
 
@@ -70,18 +70,19 @@ public class ControllerLoops {
                 }
                 if (!choose.equals("0")) {
                     System.out.println("""
-                First - 1
-                Second - 2
-                Third - 3
-                Fourth  - 4
-                Fifth - 5
-                Sixth - 6
-                """);
+                            First - 1
+                            Second - 2
+                            Third - 3
+                            Fourth  - 4
+                            Fifth - 5
+                            Sixth - 6
+                            """);
                     System.out.print("Your choose: ");
                     choose = reader.readLine();
                 }
             }
-        }catch (IOException e){
-            System.out.println("Error!" + e.getMessage());        }
+        } catch (IOException e) {
+            System.out.println("Error!" + e.getMessage());
+        }
     }
 }

@@ -1,6 +1,6 @@
 package ua.com.devEduction.controller;
 
-import ua.com.devEduction.SimpleArrays.*;
+import ua.com.devEduction.SimpleArrays.OperationArrays;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,9 +11,9 @@ import java.util.Scanner;
 
 public class ControllerArrays {
 
-    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     private static final Scanner scanner = new Scanner(System.in);
     private final OperationArrays operation = new OperationArrays();
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     public void run() {
 
@@ -127,16 +127,16 @@ public class ControllerArrays {
                     choose = reader.readLine();
                 }
             }
-            }catch(InputMismatchException | IOException e ){
-                System.out.println("Error! Your array or choose incorrectly");
-            }
+        } catch (InputMismatchException | IOException e) {
+            System.out.println("Error! Your array or choose incorrectly");
+        }
 
     }
 
 
-    private int[] enterArrays(){
+    private int[] enterArrays() {
         System.out.print("Enter length array: ");
-        int length  = scanner.nextInt();
+        int length = scanner.nextInt();
         System.out.println("Enter your array: ");
         int[] yourArray = new int[length];
         for (int i = 0; i < yourArray.length; i++) {
