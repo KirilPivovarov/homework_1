@@ -47,7 +47,7 @@ public class ControllerFunction {
                         BigDecimal x2 = scanner.nextBigDecimal();
                         System.out.print(" y2 = ");
                         BigDecimal y2 = scanner.nextBigDecimal();
-                        System.out.println("Your distance: " + operation.moduleVector(x1, y1, x2, y2).setScale(3, ROUND_CEILING));
+                        System.out.println("Your distance: " + operation.calculateModuleVector(x1, y1, x2, y2).setScale(3, ROUND_CEILING));
                         System.out.println("");
                     }
                     case "3" -> {

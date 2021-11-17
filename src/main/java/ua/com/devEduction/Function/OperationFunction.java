@@ -22,7 +22,7 @@ public class OperationFunction {
         };
     }
 
-    public BigDecimal moduleVector(BigDecimal x1, BigDecimal y1, BigDecimal x2, BigDecimal y2) {
+    public BigDecimal calculateModuleVector(BigDecimal x1, BigDecimal y1, BigDecimal x2, BigDecimal y2) {
 
         BigDecimal coordinateX = x2.subtract(x1).multiply(x2.subtract(x1));
         BigDecimal coordinateY = y2.subtract(y1).multiply(y2.subtract(y1));
