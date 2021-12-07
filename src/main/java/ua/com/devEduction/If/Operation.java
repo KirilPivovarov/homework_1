@@ -2,7 +2,7 @@ package ua.com.devEduction.If;
 
 public class Operation {
 
-    public int first(int a, int b) {
+    public int returnMultNumberIfEvenElseSum(int a, int b) {
         if (a % 2 == 0) {
             return a * b;
         } else {
@@ -10,7 +10,7 @@ public class Operation {
         }
     }
 
-    public int second(int x, int y) {
+    public int determineInWhichQuarterPoint(int x, int y) {
 
         if (x > 0) {
             if (y > 0) {
@@ -30,7 +30,7 @@ public class Operation {
         return 0;
     }
 
-    public int third(int one, int two, int three) {
+    public int findTheSumOfOnlyPositiveNumbers(int one, int two, int three) {
 
         int sum = 0;
 
@@ -47,11 +47,11 @@ public class Operation {
         return sum;
     }
 
-    public int fourth(int a, int b, int c) {
+    public int calculateExpression(int a, int b, int c) {
         return Math.max(a * b * c, a + b + c) + 3;
     }
 
-    public String fifth(int rating) {
+    public String distributionRating(int rating) {
         if (rating >= 0 && rating < 20) {
             return "F";
         } else if (rating >= 20 && rating < 40) {

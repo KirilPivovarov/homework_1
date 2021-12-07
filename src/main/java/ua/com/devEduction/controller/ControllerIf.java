@@ -35,7 +35,7 @@ public class ControllerIf {
                         int a = scanner.nextInt();
                         System.out.print("b: ");
                         int b = scanner.nextInt();
-                        System.out.println("Your answer : " + operation.first(a, b));
+                        System.out.println("Your answer : " + operation.returnMultNumberIfEvenElseSum(a, b));
                         break;
 
                     case "2":
@@ -44,7 +44,7 @@ public class ControllerIf {
                         int x = scanner.nextInt();
                         System.out.print("y: ");
                         int y = scanner.nextInt();
-                        System.out.println("Your quarter : " + operation.second(x, y));
+                        System.out.println("Your quarter : " + operation.determineInWhichQuarterPoint(x, y));
                         break;
 
                     case "3":
@@ -55,7 +55,7 @@ public class ControllerIf {
                         int two = scanner.nextInt();
                         System.out.print("three : ");
                         int three = scanner.nextInt();
-                        System.out.println("Your answer: " + operation.third(one, two, three));
+                        System.out.println("Your answer: " + operation.findTheSumOfOnlyPositiveNumbers(one, two, three));
                         break;
 
                     case "4":
@@ -66,13 +66,13 @@ public class ControllerIf {
                         int b1 = scanner.nextInt();
                         System.out.print("c : ");
                         int c1 = scanner.nextInt();
-                        System.out.println("Your answer: " + operation.fourth(a1, b1, c1));
+                        System.out.println("Your answer: " + operation.calculateExpression(a1, b1, c1));
                         break;
 
                     case "5":
                         System.out.print(" Enter your rating: ");
                         int rating = scanner.nextInt();
-                        System.out.println("Your grade: " + operation.fifth(rating));
+                        System.out.println("Your grade: " + operation.distributionRating(rating));
                         break;
                     case "0":
                         startWhile = false;

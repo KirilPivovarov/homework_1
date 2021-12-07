@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="junit-4.13.2-javadoc">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../Libraries/byte-buddy-agent-1.12.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Libraries/byte-buddy-1.11.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Libraries/junit-jupiter-5.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Libraries/junit-jupiter-api-5.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Libraries/junit-jupiter-engine-5.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Libraries/junit-jupiter-params-5.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Libraries/junit-platform-commons-1.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Libraries/junit-platform-engine-1.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Libraries/mockito-core-4.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Libraries/mockito-junit-jupiter-4.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Libraries/objenesis-3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../Libraries/junit-4.13.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Libraries/hamcrest-core-1.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

@@ -58,7 +58,7 @@ public class OperationArrays {
             }
             h = h / 3;
         }
-        return sixth(Arrays);
+        return reverseAnArray(Arrays);
     }
 
     private int partion(int[] arr, int low, int high) {
@@ -94,12 +94,8 @@ public class OperationArrays {
         int[] arrsyL = new int[mid];
         int[] arrayR = new int[length - mid];
 
-        for (int i = 0; i < mid; i++) {
-            arrsyL[i] = arrayA[i];
-        }
-        for (int i = mid; i < length; i++) {
-            arrayR[i - mid] = arrayA[i];
-        }
+        System.arraycopy(arrayA, 0, arrsyL, 0, mid);
+        if (length - mid >= 0) System.arraycopy(arrayA, mid, arrayR, mid - mid, length - mid);
         sortMerge(arrsyL, mid);
         sortMerge(arrayR, length - mid);
 
@@ -131,6 +127,46 @@ public class OperationArrays {
         return arrayC;
     }
 
+
+    public int[] mergeSort(int[] a, int n) {
+        if (n < 2) {
+            return null;
+        }
+        int mid = n / 2;
+        int[] l = new int[mid];
+        int[] r = new int[n - mid];
+
+        for (int i = 0; i < mid; i++) {
+            l[i] = a[i];
+        }
+        for (int i = mid; i < n; i++) {
+            r[i - mid] = a[i];
+        }
+        mergeSort(l, mid);
+        mergeSort(r, n - mid);
+
+       return merge(a, l, r, mid, n - mid);
+    }
+
+    public int[] merge(int[] a, int[] l, int[] r, int left, int right) {
+
+        int i = 0, j = 0, k = 0;
+        while (i < left && j < right) {
+            if (l[i] <= r[j]) {
+                a[k++] = l[i++];
+            }
+            else {
+                a[k++] = r[j++];
+            }
+        }
+        while (i < left) {
+            a[k++] = l[i++];
+        }
+        while (j < right) {
+            a[k++] = r[j++];
+        }
+        return a;
+    }
 
     public int[] BubbleSort(int[] Arrays) {
         for (int lengthIn = Arrays.length; lengthIn > 0; lengthIn--) {
@@ -175,7 +211,7 @@ public class OperationArrays {
         return arr;
     }
 
-    public int first(int[] Arrays) {
+    public int findTheMinimumElementOfAnArray(int[] Arrays) {
         int result = MAX_VALUE;
 
         for (int array : Arrays) {
@@ -186,7 +222,7 @@ public class OperationArrays {
         return result;
     }
 
-    public int second(int[] Arrays) {
+    public int findTheMaxElementOfAnArray(int[] Arrays) {
         int result = MIN_VALUE;
         for (int array : Arrays) {
             if (array > result) {
@@ -196,7 +232,7 @@ public class OperationArrays {
         return result;
     }
 
-    public int third(int[] Arrays) {
+    public int findIndexForMinimumElement(int[] Arrays) {
         int min = Arrays[0];
         int result = 0;
 
@@ -208,7 +244,7 @@ public class OperationArrays {
         return result;
     }
 
-    public int fourth(int[] Arrays) {
+    public int findIndexForMaximumElement(int[] Arrays) {
         int max = Arrays[0];
         int result = 0;
         for (int i = 0; i < Arrays.length; i++) {
@@ -220,7 +256,7 @@ public class OperationArrays {
         return result;
     }
 
-    public int fifth(int[] Arrays) {
+    public int calculateTheSumOfTheElementsOfAnArrayWithOddIndices(int[] Arrays) {
         int sum = 0;
 
         for (int i = 0; i < Arrays.length; i++) {
@@ -231,7 +267,7 @@ public class OperationArrays {
         return sum;
     }
 
-    public int[] sixth(int[] Arrays) {
+    public int[] reverseAnArray(int[] Arrays) {
         int[] reversArrays = new int[Arrays.length];
         int j = Arrays.length - 1;
         for (int i = 0; i < reversArrays.length; i++, j--) {
@@ -240,7 +276,7 @@ public class OperationArrays {
         return reversArrays;
     }
 
-    public int seventh(int[] Arrays) {
+    public int countTheNumberOfOddElementsOfTheArray(int[] Arrays) {
         int sum = 0;
         for (int currentElement : Arrays) {
             if (currentElement % 2 != 0) {
@@ -250,7 +286,7 @@ public class OperationArrays {
         return sum;
     }
 
-    public int[] eighth(int[] Arrays) {
+    public int[] swapTheFirstAndSecondHalfOfTheArray(int[] Arrays) {
         int half = Arrays.length / 2;
         int div = half + Arrays.length % 2;
         int[] arr1 = new int[half];

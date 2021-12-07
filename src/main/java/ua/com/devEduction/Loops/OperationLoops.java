@@ -2,7 +2,7 @@ package ua.com.devEduction.Loops;
 
 public class OperationLoops {
 
-    public void first() {
+    public String sumingOddNumberInRange() {
         int sum = 0;
         int val = 0;
 
@@ -12,10 +12,10 @@ public class OperationLoops {
                 val += 1;
             }
         }
-        System.out.println("Answer: sum = " + sum + ", amount = " + val);
+        return "Answer: sum = " + sum + ", amount = " + val;
+        //System.out.println("Answer: sum = " + sum + ", amount = " + val);
     }
-
-    public boolean second(int number) {
+    public boolean checkIfPrimeNumber(int number) {
         boolean answer = true;
 
         for (int i = 2; i < number; i++) {
@@ -27,7 +27,7 @@ public class OperationLoops {
         return answer;
     }
 
-    public int third(int a) {
+    public int findTheRootOfANaturalNumber(int a) {
         int i = 1;
         while (i * i <= a) {
             i++;
@@ -35,7 +35,7 @@ public class OperationLoops {
         return i - 1;
     }
 
-    public long fourth(int number) {
+    public long findTheFactorialOfANumber(int number) {
         long mult = 1;
         for (int i = 1; i <= number; i++) {
             mult *= i;
@@ -43,7 +43,7 @@ public class OperationLoops {
         return mult;
     }
 
-    public int fifth(int number) {
+    public int calculateTheSumOfTheDigitsOfANumber(int number) {
         int val = 1;
         int sum = 0;
         while ((number / (Math.pow(10, val))) > 0) {
@@ -54,7 +54,7 @@ public class OperationLoops {
         return sum;
     }
 
-    public int sixth(int number) {
+    public int outputMirroredNumber(int number) {
         int mirrorNumber = 0;
         double val = 1;
         int firstNumber = 0;

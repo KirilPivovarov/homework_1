@@ -1,6 +1,6 @@
 package ua.com.devEduction.controller;
 
-import ua.com.devEduction.SimpleArrays.OperationArrays;
+import ua.com.devEduction.SimpleArrays.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -36,40 +36,40 @@ public class ControllerArrays {
                 switch (choose) {
                     case "1":
                         int[] arr1 = enterArrays();
-                        System.out.println("Your min number: " + operation.first(arr1));
+                        System.out.println("Your min number: " + operation.findTheMinimumElementOfAnArray(arr1));
                         break;
                     case "2":
                         int[] arr2 = enterArrays();
-                        System.out.println("Your max number: " + operation.second(arr2));
+                        System.out.println("Your max number: " + operation.findTheMaxElementOfAnArray(arr2));
                         break;
                     case "3":
                         int[] arr3 = enterArrays();
                         System.out.println("Error!");
-                        System.out.println("Your min index " + operation.third(arr3));
+                        System.out.println("Your min index " + operation.findIndexForMinimumElement(arr3));
                         break;
                     case "4":
                         try {
                             int[] arr4 = enterArrays();
-                            System.out.println("Your max index " + operation.fourth(arr4));
+                            System.out.println("Your max index " + operation.findIndexForMaximumElement(arr4));
                         } catch (ArrayIndexOutOfBoundsException e) {
                             System.out.println("Error!");
                         }
                         break;
                     case "5":
                         int[] arr5 = enterArrays();
-                        System.out.println(" Your sum " + operation.fifth(arr5));
+                        System.out.println(" Your sum " + operation.calculateTheSumOfTheElementsOfAnArrayWithOddIndices(arr5));
                         break;
                     case "6":
                         int[] arr6 = enterArrays();
-                        System.out.println("Your revers array: " + Arrays.toString(operation.sixth(arr6)));
+                        System.out.println("Your revers array: " + Arrays.toString(operation.reverseAnArray(arr6)));
                         break;
                     case "7":
                         int[] arr7 = enterArrays();
-                        System.out.println("number of odd elements " + operation.seventh(arr7));
+                        System.out.println("number of odd elements " + operation.countTheNumberOfOddElementsOfTheArray(arr7));
                         break;
                     case "8":
                         int[] arr8 = enterArrays();
-                        System.out.println("Your new array: " + Arrays.toString(operation.eighth(arr8)));
+                        System.out.println("Your new array: " + Arrays.toString(operation.swapTheFirstAndSecondHalfOfTheArray(arr8)));
                         break;
                     case "9":
                         int[] arr9 = enterArrays();
@@ -92,18 +92,25 @@ public class ControllerArrays {
 
                             case "1":
                                 System.out.println("Bubble: Your sorted array - " + Arrays.toString(operation.BubbleSort(arr9)));
+                                break;
                             case "2":
                                 System.out.println("Select: Your sorted array - " + Arrays.toString(operation.selectionSort(arr9)));
+                                break;
                             case "3":
                                 System.out.println("Insert: Your sorted array - " + Arrays.toString(operation.insertionSort(arr9)));
+                                break;
                             case "4":
                                 System.out.println("Quick: Your sorted array - " + Arrays.toString(operation.quickSort(arr9, 0, arr9.length - 1)));
+                                break;
                             case "5":
                                 System.out.println("Merge: Your sorted array - " + Arrays.toString(operation.sortMerge(arr9, arr9.length)));
+                                break;
                             case "6":
                                 System.out.println("Shell: Your sorted array - " + Arrays.toString(operation.ShellSort(arr9)));
+                                break;
                             case "7":
                                 System.out.println("Heap: Your sorted array - " + Arrays.toString(operation.sortHeap(arr9)));
+                                break;
                         }
                     case "0":
                         startWhile = false;
